@@ -62,8 +62,7 @@ Required Feature
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-Change this and add hand sketched wireframes
-<img src="https://github.com/SoundPlayGames/BoardBeats/blob/main/Wireframes/Digital/wireframes.png" width=600>
+<img src="https://github.com/SoundPlayGames/BoardBeats/blob/main/Wireframes/Handdrawn/Wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://github.com/SoundPlayGames/BoardBeats/blob/main/Wireframes/Digital/wireframes.png" width=600>
