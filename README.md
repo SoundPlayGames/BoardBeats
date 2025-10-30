@@ -3,7 +3,6 @@
 Submitted by:  
 - Brejon Turner  
 - Carlos Hernandez  
-- [Add other team members here]  
 
 Time spent: **12** hours in total  
 
@@ -33,7 +32,7 @@ The following REQUIRED files are included:
 
 The following BONUS features are implemented:
 
-- [ ] Added digital wireframe/mockup image(s)  
+- [x] Added digital wireframe/mockup image(s)  
 - [ ] Added a Video/GIF of an interactive prototype  
 
 The following EXTRA features are implemented:
@@ -45,5 +44,5 @@ The following EXTRA features are implemented:
 Feel free to explore our repository for full documentation, sketches, planned API integrations, and wireframes. We’re excited to build **BoardBeats** and bring a fun, modern twist to casual mobile board games with music integration!
 
 —
-**SoundPlayGames** © 2025 Brejon Turner, Carlos Hernandez, [Add others]  
+**SoundPlayGames** © 2025 Brejon Turner, Carlos Hernandez 
 Licensed under the Apache License, Version 2.0  
