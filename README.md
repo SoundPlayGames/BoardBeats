@@ -1,68 +1,103 @@
-This document provides a summary of our project building process for our app, BoardBeats — a fun mobile experience that combines Tic Tac Toe and Checkers with Spotify-powered background music to bring chill gaming and good vibes together 🎮🎵
+# AND101 Milestone 1 - **BoardBeats**
 
-During this milestone, we began implementing our visual interfaces, connected navigation between pages, and prepared the project structure for integrating the Spotify API.
+Submitted by:  
+- Brejon Turner  
+- Carlos Hernandez  
 
-✅ Milestone Requirements
+Time spent: **12** hours in total  
+
+## Summary
+
+This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **combines two classic board games (Tic Tac Toe & Checkers) with background music streaming support for an enhanced mobile experience**.
+
+If we had to describe this milestone in three (3) emojis, they would be: 🎮🎵🧠
+
+## Milestone Requirements
+
 The following REQUIRED features are completed:
 
- Assigned features to each member of the group
-
-Carlos: Home Screen UI, Tic Tac Toe visual layout
-
-Brejon: Music Screen UI, Spotify API setup
-
- Established goal times for completing each feature
+- [x] Creation of GitHub Organization and Group Project Repo  
+- [x] Updated Course Portal group info with Group Name and App Description  
 
 The following REQUIRED files are included:
 
- Updated 📄 project_spec.md, which contains:
+- [x] Included 📄 `brainstorming.md`, which contains:  
+  - [x] Our initial brainstorming ideas (6+ ideas)  
+  - [x] 5-category evaluation of our top 3 ideas  
+  - [x] Final app idea chosen  
+- [x] Included 📄 `project_spec.md`, which contains:  
+  - [x] App Overview: Description and evaluation  
+  - [x] App Spec: User features, Chosen API(s), User Interactions  
+  - [x] Wireframe image(s)  
 
- App Overview (from Milestone 1)
+The following BONUS features are implemented:
 
- App Spec (from Milestone 1)
-
- Checked off 2+ completed features
-
- 2+ Videos/GIFs of build progress
-
- 🎥 Demo Video
-
- Added the Demo Video link to the Group Info Form on the course portal.
+- [x] Added digital wireframe/mockup image(s)  
+- [ ] Added a Video/GIF of an interactive prototype  
 
 The following EXTRA features are implemented:
 
- Added a Home Screen with a title, subtitle, hero image, and buttons for navigation
+- [ ] [List anything else that you added to improve your submission!]
 
- Added visual placeholders for Tic Tac Toe and Checkers boards
+## Notes
 
- Added interactive buttons with Toast pop-ups to simulate screen transitions
+Feel free to explore our repository for full documentation, sketches, planned API integrations, and wireframes. We’re excited to build **BoardBeats** and bring a fun, modern twist to casual mobile board games with music integration!
 
- Implemented project branching workflow using feature-specific Git branches (e.g., feature/home-screen-ui, feature/music-spotify-ui)
+—
+**SoundPlayGames** © 2025 Brejon Turner, Carlos Hernandez 
+Licensed under the Apache License, Version 2.0  
 
- Polished layout spacing and UI padding for a clean, modern look suitable for presentation
+----------------------------
 
-🎥 Demo Video
+# AND101 Milestone 2 - **Team/App Name**
 
-Here’s our Milestone 2 demo showcasing the current build progress of BoardBeats:
+Submitted by:  
+- Brejon Turner  
+- Carlos Hernandez
 
-<img src='https://i.imgur.com/YOUR_GIF_LINK.gif' title='BoardBeats Demo' width='300' alt='BoardBeats Demo' />
+Time spent: **12** hours spent in total
 
-🎬 VIDEO created with Screen Studio / OBS / Android Emulator Recorder
+## Summary
 
-YouTube Link: https://youtu.be/YOUR_VIDEO_LINK
+This document provides a summary of our project building process for our app, **BoardBeats**
 
-🧩 Build Progress Overview
-Date	Update	Member
-Nov 7	Created home screen UI (MainActivity + layout)	Carlos
-Nov 8	Added Tic Tac Toe visual layout and navigation buttons	Carlos
-Nov 8	Built MusicActivity UI and set up RecyclerView placeholder for songs	Brejon
-Nov 9	Polished styling, finalized navigation flow, and prepared demo media	Both
-📝 Notes
+## Milestone Requirements
 
-We created a public GitHub repository: SoundPlayGames/BoardBeats
 
-We’re currently preparing to integrate the Spotify Web API for real music data (to replace mock tracks).
+The following REQUIRED features are completed:
 
-All visuals are working; gameplay logic and API functionality will be added for Milestone 3.
+- [X] Assign features to each member of your group
+- [X] Establish a goal time for completing each feature
 
-The app compiles and runs successfully in the Android emulator.
+The following REQUIRED files are included:
+
+- [ ] Updated 📄 `project_spec.md`, which contains:
+  - [X] App Overview (Milestone 1)
+  - [X] App Spec (Milestone 1)
+  - [ ] Checked off 2+ completed features
+  - [ ] 2+ Videos/GIFs of build progress
+
+- [X] Our 🎥 Demo Video
+  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
+
+The following EXTRA features are implemented:
+
+- [X] Multiple Activities
+- [X] Original Graphics
+
+## 🎥 Demo Video
+
+Here's a video that demos all of the app's implemented features:
+
+<img src='https://github.com/user-attachments/assets/209ea4ef-4728-4be9-a672-3b97d0ab8b7d' title='Video Demo' width='' alt='Video Demo' />
+
+
+https://github.com/user-attachments/assets/209ea4ef-4728-4be9-a672-3b97d0ab8b7d
+
+
+
+VIDEO created with **QuickTime Player**
+
+## Notes
+
+Here's a place for any other notes on this milestone!
