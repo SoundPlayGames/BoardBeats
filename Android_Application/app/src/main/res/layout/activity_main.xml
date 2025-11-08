@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="48dp" />
 
-    <!-- You can later add a “Play Checkers” button below -->
+    <!-- We'll add a "Play checkers" button that has a visual of it -->
     <Button
         android:id="@+id/btnCheckers"
         android:layout_width="0dp"
@@ -28,5 +28,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/frontPageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Load the main page"
+        app:layout_constraintTop_toBottomOf="@id/btnCheckers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

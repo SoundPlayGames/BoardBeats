@@ -19,10 +19,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val ticTacToeButton = findViewById<Button>(R.id.btnTicTacToe)
+        val ticTacToeButton = findViewById<Button>(R.id.btnTicTacToe);
         ticTacToeButton.setOnClickListener {
-            startActivity(Intent(this, TicTacToeActivity::class.java))
-        }
+            startActivity(Intent(this, TicTacToeActivity::class.java));
+        };
 
+        val frontPageButton = findViewById<Button>(R.id.frontPageButton);
+        frontPageButton.setOnClickListener {
+            startActivity(Intent(this, FrontPageActivity::class.java));
+        };
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BoardBeats">
         <activity
+            android:name=".FrontPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".TicTacToeActivity"
             android:exported="false" />
         <activity
