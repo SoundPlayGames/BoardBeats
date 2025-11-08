@@ -50,14 +50,14 @@ Stretch Features:
 
 Required Feature
 
-- Click to button to play Tic Tac Toe or Checkers.
-  - => User goes to game they clicked
+- ~~Click to button to play Tic Tac Toe or Checkers.
+  - => User goes to game they clicked~~
 - Click button at top of screen
   - => User reveals a drop down menu of different songs to play
 - Click pause/play button
   - => User plays or stops the song
-- Click squares on gameboard
-  - => Allows the user to make a move on the board
+- ~~Click squares on gameboard
+  - => Allows the user to make a move on the board~~
 
 ## Wireframes
 
