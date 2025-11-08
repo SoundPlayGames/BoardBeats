@@ -77,8 +77,8 @@ For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 https://github.com/user-attachments/assets/288f064d-bf10-4d99-bba6-4352a022e531
 https://github.com/user-attachments/assets/353a14da-3221-4f8f-af1a-e970aa833717
 
-
-
+<img src='https://github.com/user-attachments/assets/288f064d-bf10-4d99-bba6-4352a022e531' title='Video Demo' width='' alt='Video Demo' />
+<img src='https://github.com/user-attachments/assets/353a14da-3221-4f8f-af1a-e970aa833717' title='Video Demo' width='' alt='Video Demo' />
 
 ## License
 
