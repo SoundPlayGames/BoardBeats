@@ -59,7 +59,8 @@ Time spent: **12** hours spent in total
 
 ## Summary
 
-This document provides a summary of our project building process for our app, **BoardBeats**
+We modlated each part of our building process. The main page (shows options for tic tac tow, checkers, and music player), the tic tac toe page, and the checkers page. We prioritized 
+implementing the games first for our demo, and implementing the music api by the last deadline.
 
 ## Milestone Requirements
 
