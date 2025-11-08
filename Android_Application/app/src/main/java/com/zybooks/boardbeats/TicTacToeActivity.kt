@@ -5,16 +5,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Button
 
-class TicTacToe : AppCompatActivity() {
+class TicTacToeActivity : AppCompatActivity() {
+
+    private lateinit var ticTacToeView: TicTacToeView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_tic_tac_toe)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        ticTacToeView = findViewById(R.id.ticTacToeView)
+
+        findViewById<Button>(R.id.resetButton).setOnClickListener {
+            ticTacToeView.resetGame()
         }
     }
 }

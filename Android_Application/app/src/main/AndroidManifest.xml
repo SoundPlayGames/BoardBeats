@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BoardBeats">
         <activity
-            android:name=".TicTacToe"
+            android:name=".TicTacToeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
