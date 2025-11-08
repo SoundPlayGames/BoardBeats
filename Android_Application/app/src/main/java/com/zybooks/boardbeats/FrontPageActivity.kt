@@ -33,7 +33,7 @@ class FrontPageActivity : AppCompatActivity() {
         }
 
         btnCheckers.setOnClickListener {
-            Toast.makeText(this, "Checkers coming soon!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, CheckersActivity::class.java));
         }
 
         btnMusic.setOnClickListener {
