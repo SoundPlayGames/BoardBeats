@@ -26,6 +26,9 @@ class TicTacToeActivity : AppCompatActivity() {
         playerOScoreText = findViewById(R.id.player2Score)
         drawScoreText = findViewById(R.id.drawScore)
         statusText = findViewById(R.id.statusText)
+        findViewById<Button>(R.id.btnBack).setOnClickListener {
+            finish()
+        }
 
         ticTacToeView.gameEvents = object : TicTacToeView.GameEvents {
             override fun onTurnChanged(isXTurn: Boolean) {
