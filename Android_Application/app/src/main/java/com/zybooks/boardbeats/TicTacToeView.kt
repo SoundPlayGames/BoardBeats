@@ -1,30 +1,45 @@
 package com.zybooks.boardbeats
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 
 class TicTacToeView(context: Context, attrs: AttributeSet?) : View(context, attrs) {
+    interface GameEvents {
+        fun onTurnChanged(isXTurn: Boolean)
+        fun onGameWon(winner: Int)
+        fun onDraw()
+    }
+
     private val boardPaint = Paint().apply {
-        color = Color.BLACK;
+        color = Color.parseColor("#0C6174");
         strokeWidth = 10f;
         style = Paint.Style.STROKE;
         isAntiAlias = true;
     };
 
     private val xPaint = Paint().apply {
-        color = Color.BLUE;
+        color = Color.parseColor("#0F1A2B");
         strokeWidth = 15f;
         style = Paint.Style.STROKE;
         isAntiAlias = true;
     };
 
     private val oPaint = Paint().apply {
-        color = Color.RED;
+        color = Color.parseColor("#FF8A5C");
         strokeWidth = 15f;
         style = Paint.Style.STROKE;
+        isAntiAlias = true;
+    };
+
+    private val winFillPaint = Paint().apply {
+        color = Color.parseColor("#DFF4FB"); // soft highlight for winning line
+        style = Paint.Style.FILL;
         isAntiAlias = true;
     };
 
@@ -32,6 +47,8 @@ class TicTacToeView(context: Context, attrs: AttributeSet?) : View(context, attr
     private val board = Array(3) { IntArray(3) } ;// 0 = empty, 1 = X, 2 = O
     private var playerXTurn = true;
     private var gameOver = false;
+    private var winningLine: List<Pair<Int, Int>>? = null;
+    var gameEvents: GameEvents? = null
 
     // Ensure the board stays square
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -57,10 +74,19 @@ class TicTacToeView(context: Context, attrs: AttributeSet?) : View(context, attr
     };
 
     private fun drawMarkers(canvas: Canvas) {
+        val winCells = winningLine?.toSet();
         for (row in 0 until 3) {
             for (col in 0 until 3) {
                 val left = col * cellSize;
                 val top = row * cellSize;
+                if (winCells != null && winCells.contains(Pair(row, col))) {
+                    canvas.drawRoundRect(
+                        RectF(left + 8f, top + 8f, left + cellSize - 8f, top + cellSize - 8f),
+                        24f,
+                        24f,
+                        winFillPaint
+                    );
+                }
                 when (board[row][col]) {
                     1 -> drawX(canvas, left, top);
                     2 -> drawO(canvas, left, top);
@@ -91,45 +117,72 @@ class TicTacToeView(context: Context, attrs: AttributeSet?) : View(context, attr
 
         if (row in 0..2 && col in 0..2 && board[row][col] == 0) {
             board[row][col] = if (playerXTurn) 1 else 2;
-            playerXTurn = !playerXTurn;
-            invalidate(); // redraw
-
-            if (checkForWin()) {
+            val winner = checkForWin();
+            if (winner != 0) {
                 gameOver = true;
-                //Todo: In the future, trigger a callback to show the winner
+                gameEvents?.onGameWon(winner);
+            } else if (isBoardFull()) {
+                gameOver = true;
+                gameEvents?.onDraw();
+            } else {
+                playerXTurn = !playerXTurn;
+                gameEvents?.onTurnChanged(playerXTurn);
             }
+            invalidate(); // redraw
         }
         return true;
     };
 
-    private fun checkForWin(): Boolean {
+    private fun checkForWin(): Int {
+        winningLine = null;
         // check rows, columns, and diagonals
         for (i in 0 until 3) {
             if (board[i][0] != 0 &&
                 board[i][0] == board[i][1] &&
                 board[i][0] == board[i][2]
-            ) return true;
+            ) {
+                winningLine = listOf(Pair(i, 0), Pair(i, 1), Pair(i, 2));
+                return board[i][0];
+            }
 
             if (board[0][i] != 0 &&
                 board[0][i] == board[1][i] &&
                 board[0][i] == board[2][i]
-            ) return true;
+            ) {
+                winningLine = listOf(Pair(0, i), Pair(1, i), Pair(2, i));
+                return board[0][i];
+            }
         }
 
         if (board[0][0] != 0 &&
             board[0][0] == board[1][1] &&
             board[0][0] == board[2][2]
-        ) return true;
+        ) {
+            winningLine = listOf(Pair(0, 0), Pair(1, 1), Pair(2, 2));
+            return board[0][0];
+        }
 
         if (board[0][2] != 0 &&
             board[0][2] == board[1][1] &&
             board[0][2] == board[2][0]
-        ) return true;
+        ) {
+            winningLine = listOf(Pair(0, 2), Pair(1, 1), Pair(2, 0));
+            return board[0][2];
+        }
 
-        return false;
+        return 0;
     };
 
-    fun resetGame() {
+    private fun isBoardFull(): Boolean {
+        for (r in 0..2) {
+            for (c in 0..2) {
+                if (board[r][c] == 0) return false;
+            }
+        }
+        return true;
+    }
+
+    fun resetBoard() {
         for (r in 0..2) {
             for (c in 0..2) {
                 board[r][c] = 0;
@@ -137,6 +190,8 @@ class TicTacToeView(context: Context, attrs: AttributeSet?) : View(context, attr
         }
         playerXTurn = true;
         gameOver = false;
+        winningLine = null;
+        gameEvents?.onTurnChanged(playerXTurn);
         invalidate();
     }
 }

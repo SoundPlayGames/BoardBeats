@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Board base -->
+    <path
+        android:fillColor="#E9F6FB"
+        android:pathData="M22,22h64a6,6 0 0 1 6,6v52a6,6 0 0 1 -6,6h-64a6,6 0 0 1 -6,-6v-52a6,6 0 0 1 6,-6z" />
+
+    <!-- Board outline -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M22,22h64a6,6 0 0 1 6,6v52a6,6 0 0 1 -6,6h-64a6,6 0 0 1 -6,-6v-52a6,6 0 0 1 6,-6z"
+        android:strokeWidth="3.5"
+        android:strokeColor="#0C6174" />
+
+    <!-- Grid lines -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M42,32L42,86"
+        android:strokeWidth="3.5"
+        android:strokeColor="#0C6174" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M66,32L66,86"
+        android:strokeWidth="3.5"
+        android:strokeColor="#0C6174" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M26,50L90,50"
+        android:strokeWidth="3.5"
+        android:strokeColor="#0C6174" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M26,70L90,70"
+        android:strokeWidth="3.5"
+        android:strokeColor="#0C6174" />
+
+    <!-- X marker -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M30,36L40,46M30,46L40,36"
+        android:strokeWidth="4"
+        android:strokeColor="#0C6174"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- O marker -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M32,76a8,8 0 1 1 16,0a8,8 0 1 1 -16,0"
+        android:strokeWidth="4"
+        android:strokeColor="#189AB4" />
+
+    <!-- Music note stem -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M74,30L74,62"
+        android:strokeWidth="5.5"
+        android:strokeColor="#FF8A5C"
+        android:strokeLineCap="round" />
+
+    <!-- Music note flag -->
+    <path
+        android:fillColor="#FF8A5C"
+        android:pathData="M74,30c12,3 20,11 16,21c-2,6 -8,10 -14,12l0,-7c4,-2 7,-5 7,-10c0,-4 -3,-7 -9,-9z" />
+
+    <!-- Music note head -->
+    <path
+        android:fillColor="#FF8A5C"
+        android:pathData="M74,64a10,10 0 1 1 -20,0a10,10 0 1 1 20,0" />
+</vector>

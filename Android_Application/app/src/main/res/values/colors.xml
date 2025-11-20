@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="boardbeats_primary">#189AB4</color>
+    <color name="boardbeats_primary_strong">#0C6174</color>
+    <color name="boardbeats_primary_light">#8BD6E0</color>
+    <color name="boardbeats_surface">#F5FBFD</color>
+    <color name="boardbeats_surface_alt">#E4F1F5</color>
+    <color name="boardbeats_background">#E9F6FB</color>
+    <color name="boardbeats_on_background">#0F1A2B</color>
+    <color name="boardbeats_on_background_subtle">#5C6D82</color>
+    <color name="boardbeats_on_surface">#0F1A2B</color>
+    <color name="boardbeats_on_primary">#FFFFFF</color>
 </resources>
